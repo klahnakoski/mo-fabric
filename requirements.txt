@@ -1,2 +1,8 @@
 fabric2
 invoke
+mo-math
+mo-dots
+mo-files
+mo-future
+mo-kwargs
+mo-logs

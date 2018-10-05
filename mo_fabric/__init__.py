@@ -11,21 +11,19 @@ from __future__ import division
 from __future__ import unicode_literals
 
 import os
+import string
 import sys
 from contextlib import contextmanager
 from datetime import datetime
 
 from fabric2 import Config, Result
 from fabric2 import Connection as _Connection
-from jx_base.expressions import extend
-
-from mo_math.randoms import Random
-
 from mo_dots import set_default, unwrap, wrap
 from mo_files import File, TempFile
 from mo_future import text_type
 from mo_kwargs import override
 from mo_logs import Log, exceptions, machine_metadata
+from mo_math.randoms import Random
 
 
 class Connection(object):
@@ -92,7 +90,7 @@ class Connection(object):
 
     def put(self, local, remote, use_sudo=False):
         if use_sudo:
-            filename = "/tmp/"+Random.hex(20)
+            filename = "/tmp/" + Random.string(20, string.digits + 'ABCDEF')
             self.conn.put(File(local).abspath, filename)
             self.sudo("cp "+filename+" "+remote)
             self.sudo("rm "+filename)
@@ -115,9 +113,14 @@ class Connection(object):
         return getattr(self.conn, item)
 
 
-@extend(Result)
-def __contains__ (self, value):
+# EXTEND Result WITH __contains__ SO WE CAN PERFORM
+# if some_text in result:
+def __contains__(self, value):
     return value in self.stdout or value in self.stderr
+
+
+setattr(Result, "__contains__", __contains__)
+del __contains__
 
 
 EMPTY = str("")
