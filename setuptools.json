@@ -20,6 +20,6 @@
     "name": "mo-fabric",
     "packages": ["mo_fabric"],
     "url": "https://github.com/klahnakoski/mo-fabric",
-    "version": "2.27.18331",
+    "version": "2.28.18331",
     "zip_safe": false
 }
