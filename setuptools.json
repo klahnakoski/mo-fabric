@@ -10,8 +10,8 @@
     "description": "Thin facade over fabric",
     "include_package_data": true,
     "install_requires": [
-                     "fabric2",               "invoke",  "mo-dots>=2.20.18318",
-        "mo-files>=2.26.18331",            "mo-future",            "mo-kwargs",
+                     "fabric2",               "invoke",              "mo-dots",
+        "mo-files>=2.29.19005",            "mo-future",            "mo-kwargs",
                      "mo-logs",              "mo-math"
     ],
     "license": "MPL 2.0",
@@ -20,6 +20,6 @@
     "name": "mo-fabric",
     "packages": ["mo_fabric"],
     "url": "https://github.com/klahnakoski/mo-fabric",
-    "version": "2.28.18331",
+    "version": "2.29.19005",
     "zip_safe": false
 }
