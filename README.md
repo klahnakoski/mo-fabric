@@ -14,7 +14,10 @@ Here are the differences:
 * A few convenience methods are added:
   * `conn.exists(path)` - to test if a remote file exists
   * `with conn.warn_only():` - context manager if you do not care if your commands fail
-  * `get(remote, local)` - allows you to use tilde (`~`) on Windows to refer to home directory
-  * `put(local, remote, use_sudo=False)` - same as `get` plus the ability to upload as root
+  * `get(remote, local, use_sudo=False)` - allows you to use tilde (`~`) on Windows to refer to home directory
+  * `put(local, remote, use_sudo=False)` - similar to `get`, except copies files to remote
   * `sudo(command)` works with the `cd()` context manager
-* Added `Result.__contains__()` so checking for patterns in command output is simpler
+* Added `Result.__contains__()` so checking for patterns in command output is simpler:
+  ```python
+    not_found = "No` such file or directory" in result
+  ```
