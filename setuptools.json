@@ -16,7 +16,7 @@
          "mo-files>=3.23.19346", "mo-future>=3.17.19324", "mo-kwargs>=3.20.19344",
           "mo-logs>=3.21.19344",   "mo-math>=3.23.19346"
     ],
-    "python_requires": [">=2.7", ">=3.6"],
+    "python_requires": "==2.7, >=3.6",
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
