@@ -21,7 +21,7 @@
         "$concat": [
             "# mo-fabric",
             "",
-            "A façade atop [fabric2](http://www.fabfile.org/)",
+            "A facade atop [fabric2](http://www.fabfile.org/)",
             "",
             "## Overview",
             "",
