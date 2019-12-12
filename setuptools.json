@@ -14,14 +14,14 @@
     "install_requires": [
                       "fabric2",                "invoke",   "mo-dots>=3.22.19344",
          "mo-files>=3.26.19346", "mo-future>=3.17.19324", "mo-kwargs>=3.20.19344",
-          "mo-logs>=3.21.19344",   "mo-math>=3.27.19346"
+          "mo-logs>=3.21.19344",   "mo-math>=3.28.19346"
     ],
     "license": "MPL 2.0",
     "long_description": {
         "$concat": [
             "# mo-fabric",
             "",
-            "A facade atop [fabric2](http://www.fabfile.org/)",
+            "A façade atop [fabric2](http://www.fabfile.org/)",
             "",
             "## Overview",
             "",
@@ -52,6 +52,6 @@
     "packages": ["mo_fabric"],
     "python_requires": "==2.7, >=3.6",
     "url": "https://github.com/klahnakoski/mo-fabric",
-    "version": "3.27.19346",
+    "version": "3.28.19346",
     "zip_safe": false
 }
