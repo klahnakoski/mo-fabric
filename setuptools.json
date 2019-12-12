@@ -9,7 +9,7 @@
         "Topic :: Software Development :: Libraries :: Python Modules",
         "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)"
     ],
-    "description": "Thin facade over fabric",
+    "description": "Thin facade atop fabric",
     "include_package_data": true,
     "install_requires": [
                       "fabric2",                "invoke",   "mo-dots>=3.22.19344",
